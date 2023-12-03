@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GUI.MainPage">
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>      
+            <HorizontalStackLayout
+                Grid.Row="0"
+                Grid.Column="0"
+                Padding="10, 20, 10, 20"
+                Spacing="20">
+
+                <Button
+                    Text="Open file..."
+                    Clicked="OpenButton_Clicked" />
+                
+                <Picker x:Name="ParserPicker" Title="Choose parser type" SelectedIndexChanged="Parser_Selected">
+                     <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>SAX</x:String>
+                            <x:String>DOM</x:String>
+                            <x:String>LINQ to XML</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Button
+                    Text="Clear"
+                    Clicked="ClearButton_Clicked" />
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Grid.Row="0"
+                Grid.Column="1"
+                Padding="10, 20, 10, 20"
+                Spacing="20">
+
+                <Button
+                    Text="Find"
+                    Clicked="FindButton_Clicked" />
+
+                <Button
+                    Text="Export as HTML"
+                    Clicked="ExportButton_Clicked" />
+
+                <Button
+                    Text="Exit"
+                    Clicked="ExitButton_Clicked" />
+
+            </HorizontalStackLayout>
+
+            <Label x:Name="StatusLabel"
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="File is not chosen"
+            TextColor="Red" />
+
+            <HorizontalStackLayout
+                Grid.Row="2"
+                Grid.Column="0"
+                Spacing="20"
+                Padding="10"
+                >
+
+                <CheckBox
+                    x:Name="NameCheckbox"
+                     />
+                
+                <Label 
+                    WidthRequest="80"
+                    Text="Name" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" />
+                
+                <Entry 
+                    x:Name="NameEntry"
+                    Placeholder="Enter person name here"
+                    WidthRequest="200" />
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Grid.Row="2"
+                Grid.Column="1"
+                Spacing="20"
+                Padding="10"
+                >
+
+                <CheckBox
+                    x:Name="FacultyCheckbox"
+                     />
+                
+                <Label 
+                    WidthRequest="80"
+                    Text="Faculty" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" />
+                
+                <Entry 
+                    x:Name="FacultyEntry"
+                    Placeholder="Enter person faculty here"
+                    WidthRequest="200" />
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Grid.Row="3"
+                Grid.Column="0"
+                Spacing="20"
+                Padding="10"
+                >
+
+                <CheckBox
+                    x:Name="ChairCheckbox"
+                     />
+                
+                <Label 
+                    WidthRequest="80"
+                    Text="Chair" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" />
+                
+                <Entry 
+                    x:Name="ChairEntry"
+                    Placeholder="Enter person chair here"
+                    WidthRequest="200" />
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Grid.Row="3"
+                Grid.Column="1"
+                Spacing="20"
+                Padding="10"
+                >
+
+                <CheckBox
+                    x:Name="RoleCheckbox"
+                     />
+                
+                <Label 
+                    WidthRequest="80"
+                    Text="Role" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" />
+                
+                <Entry 
+                    x:Name="RoleEntry"
+                    Placeholder="Enter person role here"
+                    WidthRequest="200" />
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Grid.Row="4"
+                Grid.Column="0"
+                Spacing="20"
+                Padding="10"
+                >
+
+                <CheckBox
+                    x:Name="SalaryCheckbox"
+                     />
+                
+                <Label 
+                    WidthRequest="80"
+                    Text="Salary" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" />
+                
+                <Entry 
+                    x:Name="SalaryEntry"
+                    Placeholder="Enter person salary ($) here"
+                    WidthRequest="200" />
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Grid.Row="4"
+                Grid.Column="1"
+                Spacing="20"
+                Padding="10"
+                >
+
+                <CheckBox
+                    x:Name="TimeTenureCheckbox"
+                     />
+                
+                <Label 
+                    WidthRequest="80"
+                    Text="TimeTenure" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" />
+                
+                <Entry 
+                    x:Name="TimeTenureEntry"
+                    Placeholder="Enter person time tenure (days) here"
+                    WidthRequest="200" />
+
+            </HorizontalStackLayout>
+
+        </Grid>
+        
+    </ScrollView>
+
+</ContentPage>

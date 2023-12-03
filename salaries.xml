@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Salaries>
+	<Person>
+		<Name>
+			<FirstName>Dmytro</FirstName>
+			<LastName>Ostapenko</LastName>
+		</Name>
+		<Faculty>CSC</Faculty>
+		<Chair>TPP</Chair>
+		<Role>Aspirant</Role>
+		<Salary>300</Salary>
+		<TimeTenure>123</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Yuri</FirstName>
+			<LastName>Koval</LastName>
+		</Name>
+		<Faculty>CSC</Faculty>
+		<Chair>TC</Chair>
+		<Role>Aspirant</Role>
+		<Salary>9999</Salary>
+		<TimeTenure>321</TimeTenure>
+	</Person>
+</Salaries>
